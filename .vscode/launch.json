@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npx cypress run --env tags=\"@ReplyInterview\"",
+            "name": "Run Reply",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}

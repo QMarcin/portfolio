@@ -1,0 +1,48 @@
+{
+  "name": "Cypress",
+  "version": "1.0.0",
+  "description": "testing cypress",
+  "main": "Google",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:accessibility": "./node_modules/.bin/cypress-tags run -e TAGS=\"@accessibility\"",
+    "test:all": "cypress run --spec \"**/*.feature\"",
+    "test:reply": "npx cypress run --env tags=\"@ReplyInterview\"",
+    "eject": "react-scripts eject",
+    "delete:reports": "rm cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
+  },
+  "keywords": [
+    "testing",
+    "cypress",
+    "java"
+  ],
+  "author": "Marcin Kulikowski",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress-real-events": "^1.13.0",
+    "save-dev": "^0.0.1-security",
+    "typescript": "~4.4.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress\\support\\steps\\replyInterviewContacts.ts",
+      "cypress\\support\\steps\\replyInterviewHelper.ts",
+      "cypress\\support\\steps\\replyInterviewReports.ts"
+    ],
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enabled": false
+    }
+  }
+}

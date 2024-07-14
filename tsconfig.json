@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "allowJs": true,
+      "types": ["cypress"],
+      "baseUrl": ".",
+      "esModuleInterop": true,
+    },
+    "files": [
+      "cypress/support/steps/replyInterviewContacts.ts",
+      "cypress/support/steps/replyInterviewHelper.ts",
+      "cypress/support/steps/replyInterviewReports.ts",
+      "cypress/support/steps/google.ts"
+    ]
+  }
